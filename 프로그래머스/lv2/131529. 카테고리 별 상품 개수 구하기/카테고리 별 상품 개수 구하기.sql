@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT LEFT(PRODUCT_CODE, 2) AS 'CATEGORY', COUNT('CATEGORY') AS PRODUCTS
+FROM PRODUCT
+GROUP BY
+    CATEGORY   -- 여기서 'CATEGORY'하면 왜 안되냐. 그리고 위에서 따옴표 안 하고 여기서 안 하는건 왜 안되냐
+ORDER BY
+    CATEGORY;
