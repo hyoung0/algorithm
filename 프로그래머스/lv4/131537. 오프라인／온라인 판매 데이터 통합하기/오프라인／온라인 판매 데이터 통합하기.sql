@@ -1,0 +1,13 @@
+-- 코드를 입력하세요
+SELECT date_format(sales_date, '%Y-%m-%d') as sales_date,PRODUCT_ID,USER_ID, SALES_AMOUNT
+FROM ONLINE_SALE
+WHERE MONTH(SALES_DATE) = '03'
+UNION 
+SELECT date_format(sales_date, '%Y-%m-%d') as sales_date,PRODUCT_ID, NULL AS USER_ID, SALES_AMOUNT
+FROM OFFLINE_SALE
+WHERE MONTH(SALES_DATE) = '03'
+ORDER BY
+    SALES_DATE ASC,
+    PRODUCT_ID ASC,
+    USER_ID ASC
+
